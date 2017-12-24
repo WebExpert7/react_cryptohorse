@@ -1,0 +1,29 @@
+.BrowsePage {
+    padding-bottom: 6.4rem
+}
+.BrowseSearchBar {
+    position: relative;
+    margin-top: 2.4rem
+}
+
+.BrowseSearchBar .Filter-select {
+    margin-left: 0;
+    margin-top: .8rem;
+    padding: 1.4rem 2.4rem;
+    padding-right: 3.75rem;
+    width: 100%
+}
+
+@media (min-width:760px) {
+    .BrowseSearchBar .Filter-select {
+        margin-left: 1rem;
+        padding: 1.3rem 1.8rem;
+        padding-right: 3.75rem;
+        margin-top: 0;
+        width: auto
+    }
+}
+
+.BrowseAnnouncement {
+    margin-top: 2.4rem
+}

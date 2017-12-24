@@ -1,0 +1,217 @@
+
+.PressPage-section {
+    margin-bottom: 6.4rem
+}
+
+.PressPage-section--spelling img {
+    width: 100%
+}
+
+.PressPage-description {
+    font-size: 2.4rem;
+    color: #575553
+}
+
+.PressPage-highlight {
+    padding: .3rem;
+    border-radius: .3rem;
+    background-color: #c5eefa;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #2a2825
+}
+
+.PressPage-bg {
+    background-color: #f9f8f6;
+    background-image: url("../images/pattern-tile.svg");
+    background-size: 50rem auto;
+    padding: 6.4rem 0 3.2rem
+}
+
+.PressPage-cardWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 48rem;
+    margin: 6.4rem auto
+}
+
+@media (min-width:760px) {
+    .PressPage-cardWrapper--expandMd {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        max-width: 100%
+    }
+}
+
+@media (min-width:960px) {
+    .PressPage-cardWrapper--expandLg {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        max-width: 100%
+    }
+}
+
+.PressPage-card {
+    display: block;
+    width: 100%;
+    padding: 2.4rem;
+    margin-bottom: 2.4rem;
+    border: .2rem solid #f3f1ee;
+    border-radius: .5rem;
+    box-shadow: 0 .2rem 0 #f3f1ee;
+    background-color: #fff;
+    text-align: left
+}
+
+.PressPage-card-h2 {
+    font-size: 2rem
+}
+
+.PressPage-card-p {
+    margin: 0
+}
+
+@media (min-width:760px) {
+    .PressPage-card {
+        -ms-flex-preferred-size: 31.67%;
+        flex-basis: 31.67%;
+        max-width: 100%;
+        min-height: 22rem
+    }
+}
+
+.PressPage-profilePhoto {
+    max-width: 9rem
+}
+
+.PressPage-assetWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.PressPage-asset {
+    position: relative;
+    display: block;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 4.8rem 3.2rem 8rem;
+    margin-bottom: 2.4rem;
+    border: .2rem solid #f3f1ee;
+    box-shadow: 0 .2rem 0 #f3f1ee;
+    border-radius: .5rem;
+    background-color: #fff
+}
+
+.PressPage-asset-img {
+    width: 100%
+}
+
+@media (min-width:760px) {
+    .PressPage-asset {
+        -ms-flex-preferred-size: 31.33%;
+        flex-basis: 31.33%;
+        max-width: 100%;
+        margin: 0 0 2.4rem
+    }
+    .PressPage-asset--full {
+        padding: 0
+    }
+    .PressPage-asset--wide {
+        -ms-flex-preferred-size: 65.67%;
+        flex-basis: 65.67%;
+        padding: 9.6rem 6.4rem
+    }
+}
+
+.PressPage-asset-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 1.5rem 4.8rem;
+    border-top: .2rem solid #f3f1ee;
+    background-color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #e96bd4
+}
+
+.PressPage-asset-footer:after,
+.PressPage-asset-footer:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: 50%
+}
+
+.PressPage-asset-footer:before {
+    left: 1.5rem;
+    background-image: url("/icons/image.svg");
+    background-size: 1.8rem auto
+}
+
+.PressPage-asset-footer:after {
+    right: 1.5rem;
+    background-image: url("/icons/download.svg");
+    background-size: contain
+}
+
+.PressPage-link {
+    position: relative;
+    display: block;
+    margin-left: 6rem;
+    margin-bottom: 3.2rem;
+    padding-top: .8rem;
+    color: #575553
+}
+
+.PressPage-link:after {
+    content: "";
+    position: absolute;
+    left: -6rem;
+    top: 0;
+    bottom: 0;
+    height: 4.5rem;
+    width: 4.5rem;
+    background-image: url("icons/paper.svg");
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: contain
+}

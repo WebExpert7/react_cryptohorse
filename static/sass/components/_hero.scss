@@ -1,0 +1,62 @@
+
+.Hero {
+    padding: 2.4rem 0 6.4rem
+}
+
+@media (min-width:760px) {
+    .Hero {
+        padding: 3.2rem 0 6.4rem
+    }
+}
+
+.Hero--padded {
+    padding: 12rem 0
+}
+
+.Hero p.Hero-bodyText {
+    font-size: 2rem;
+    margin-bottom: .8rem
+}
+
+.Hero p.Hero-description {
+    margin: 0 auto 3.2rem;
+    font-size: 2.4rem;
+    line-height: 1.4
+}
+
+@media (min-width:960px) {
+    .Hero p.Hero-description {
+        font-size: 2.4rem
+    }
+}
+
+.Hero-h1 {
+    margin-bottom: 1.5rem;
+    font-size: 5rem
+}
+
+@media (min-width:960px) {
+    .Hero-h1 {
+        font-size: 6rem
+    }
+}
+
+.Hero-h2 {
+    margin-bottom: 1.5rem;
+    font-size: 4.2rem
+}
+
+.Hero-h3 {
+    margin-bottom: .8rem;
+    font-size: 3.2rem
+}
+
+.Hero-image,
+.Hero-quickFaq {
+    margin-bottom: 3.2rem
+}
+
+.Hero-image {
+    max-width: 100%;
+    height: auto
+}

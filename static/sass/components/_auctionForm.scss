@@ -1,0 +1,74 @@
+.AuctionForm-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    border-bottom: .2rem solid #f3f1ee
+}
+
+.AuctionForm-row--submit {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none
+}
+
+.AuctionForm-title {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    color: #575553;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: left
+}
+
+.AuctionForm-unit {
+    margin-right: 1.5rem;
+    color: #9c9c9b;
+    font-size: 1.8rem;
+    font-weight: 500
+}
+
+.AuctionForm-button {
+    width: 100%
+}
+
+input[type=number].AuctionForm-value {
+    position: relative;
+    width: 9rem;
+    color: #9c9c9b;
+    font-size: 1.8rem;
+    border: .2rem solid #f3f1ee
+}
+
+input[type=number].AuctionForm-value:active,
+input[type=number].AuctionForm-value:focus,
+input[type=number].AuctionForm-value:hover {
+    color: #2a2825;
+    border: .2rem solid #e7e6e4
+}
+
+input[type=number].AuctionForm-value::-webkit-inner-spin-button,
+input[type=number].AuctionForm-value::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-left: 2px solid #f3f1ee;
+    position: absolute;
+    width: 1.5rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f9f8f6;
+    background-image: url("/images/form-value-bg.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 2rem auto;
+    opacity: 1;
+    cursor: pointer
+}

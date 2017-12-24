@@ -1,0 +1,62 @@
+.Icon {
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.6rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%
+}
+
+.Icon--heart {
+    background-image: url("../icons/heart.svg")
+}
+
+.Icon--oven {
+    background-image: url("../icons/oven.svg")
+}
+
+.Icon--eggplant {
+    background-image: url("../icons/eggplant.svg")
+}
+
+.Icon--eggplantCancel {
+    background-image: url("../icons/eggplant-cancel.svg")
+}
+
+.Icon--tag {
+    background-image: url("../icons/tag.svg")
+}
+
+.Icon--tagCancel {
+    background-image: url("../icons/tag-cancel.svg")
+}
+
+.Icon--timer {
+    background-image: url("../icons/timer.svg")
+}
+
+.Icon--egg {
+    background-image: url("/icons/egg.svg");
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation: rollEgg 4s infinite;
+    animation: rollEgg 4s infinite
+}
+
+.Icon--gift {
+    background-image: url("../icons/gift.svg")
+}
+
+.Icon--finney {
+    background-image: url("../icons/finney.svg")
+}
+
+.Icon--pencil {
+    background-image: url("../icons/pencil.svg")
+}
+
+.Icon--tiny {
+    width: 1.1rem;
+    height: 1.1rem;
+    vertical-align: middle
+}

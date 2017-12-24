@@ -1,0 +1,81 @@
+
+
+.SearchSuggestions {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #9c9c9b;
+    background-color: #fff;
+    border: 2px solid #e7e6e4;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    padding: .5rem 0
+}
+
+.SearchSuggestions-item {
+    display: block;
+    position: relative;
+    padding: .5rem 1.25rem .5rem 3.5rem;
+    cursor: pointer
+}
+
+.SearchSuggestions-item:hover {
+    color: #2a2825
+}
+
+.SearchSuggestions-item:before {
+    position: absolute;
+    top: 50%;
+    left: 1.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-image: url("/icons/type-common.svg");
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    content: ""
+}
+
+.SearchSuggestions-item--body:before,
+.SearchSuggestions-item--colorbody:before {
+    background-image: url("/icons/cattribute-body.svg")
+}
+
+.SearchSuggestions-item--coloreyes:before {
+    width: 1.7rem;
+    background-image: url("/icons/cattribute-eyecolor.svg")
+}
+
+.SearchSuggestions-item--color:before {
+    width: 1.7rem;
+    background-image: url("/icons/cattribute-color.svg")
+}
+
+.SearchSuggestions-item--pattern:before {
+    background-image: url("/icons/cattribute-pattern.svg")
+}
+
+.SearchSuggestions-item--mouth:before {
+    background-image: url("/icons/cattribute-mouth.svg")
+}
+
+.SearchSuggestions-item--eyes:before {
+    width: 1.7rem;
+    background-image: url("/icons/cattribute-eyeshape.svg")
+}
+
+.SearchSuggestions-item--viewAll {
+    padding-left: 1.5rem;
+    color: #9c9c9b
+}
+
+.SearchSuggestions-item--viewAll:before {
+    display: none
+}
+
+.SearchSuggestions-item+.SearchSuggestions-item--viewAll {
+    border-top: 2px solid #e7e6e4;
+    margin-top: .5rem;
+    padding-top: 1rem
+}

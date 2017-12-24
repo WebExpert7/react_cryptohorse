@@ -1,0 +1,42 @@
+.AuctionGraph {
+    display: block
+}
+
+.AuctionGraph-chart {
+    display: block;
+    margin: 0 0 1.5rem;
+    width: 100%;
+    height: auto
+}
+
+.AuctionGraph-prices {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.AuctionGraph-price {
+    color: #9c9c9b;
+    font-size: 1.6rem;
+    font-weight: 500
+}
+
+.AuctionGraph-price-fee {
+    color: #2a2825;
+    font-style: normal
+}
+
+.AuctionGraph-price-fee em {
+    font-style: normal
+}
+
+.AuctionGraph--sale .AuctionGraph-price-fee em {
+    color: #fba371
+}
+
+.AuctionGraph--sire .AuctionGraph-price-fee em {
+    color: #e27dd1
+}

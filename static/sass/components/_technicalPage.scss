@@ -1,0 +1,166 @@
+
+.TechnicalPage-section {
+    margin-bottom: 6.4rem
+}
+
+.TechnicalPage-bg {
+    background-color: #f9f8f6;
+    background-image: url("../images/pattern-tile.svg");
+    background-size: 50rem auto;
+    padding: 6.4rem 0 3.2rem
+}
+
+.TechnicalPage-title {
+    margin-bottom: 3.2rem
+}
+
+.TechnicalPage-date {
+    margin-bottom: .8rem;
+    font-size: 1.6rem;
+    font-weight: 500
+}
+
+.TechnicalPage-highlight {
+    padding: .3rem;
+    border-radius: .3rem;
+    background-color: #c5eefa;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #2a2825
+}
+
+.TechnicalPage-keyCardWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.TechnicalPage-keyCard {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    padding: 2.4rem;
+    margin-bottom: 2.4rem;
+    border: .2rem solid #f3f1ee;
+    border-radius: .5rem;
+    background-color: #fff
+}
+
+.TechnicalPage-keyCard p {
+    margin-bottom: 0
+}
+
+@media (min-width:480px) {
+    .TechnicalPage-keyCard {
+        -ms-flex-preferred-size: 48.67%;
+        flex-basis: 48.67%
+    }
+}
+
+.TechnicalPage-keyCard--flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.TechnicalPage-timeline {
+    position: relative
+}
+
+.TechnicalPage-timeline:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: .6rem;
+    margin: auto;
+    background-color: #e7e6e4;
+    z-index: 1
+}
+
+.TechnicalPage-timelineCard {
+    position: relative;
+    width: 100%;
+    max-width: 48rem;
+    margin: 0 auto 2.4rem;
+    padding: 2.4rem;
+    border: .2rem solid #f3f1ee;
+    border-radius: .5rem;
+    background-color: #fff;
+    z-index: 2
+}
+
+@media (min-width:760px) {
+    .TechnicalPage-timelineCard {
+        width: 55%;
+        max-width: 55%
+    }
+}
+
+.TechnicalPage-timelineCard p {
+    margin-bottom: .8rem;
+    line-height: 1.4;
+    color: #575553
+}
+
+.TechnicalPage-timelineCard p:last-of-type {
+    margin-bottom: 0
+}
+
+.TechnicalPage-timelineCard h3 {
+    font-size: 2.4rem
+}
+
+.TechnicalPage-timelineCard--center {
+    text-align: center
+}
+
+@media (min-width:760px) {
+    .TechnicalPage-timelineCard--left {
+        margin-left: 0;
+        margin-right: auto
+    }
+}
+
+@media (min-width:760px) {
+    .TechnicalPage-timelineCard--right {
+        margin-left: auto;
+        margin-right: 0
+    }
+}
+
+.TechnicalPage-number {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    height: 3.4rem;
+    width: 3.4rem;
+    margin-bottom: 2.4rem;
+    margin-right: 2.4rem;
+    padding-top: .2rem;
+    font-size: 2rem
+}
+
+.TechnicalPage-number,
+.TechnicalPage-year {
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-align: center;
+    border-radius: 50%
+}
+
+.TechnicalPage-year {
+    height: 5.4rem;
+    width: 5.4rem;
+    margin: 0 auto 2.4rem;
+    padding-top: 1.5rem;
+    font-size: 1.6rem;
+    z-index: 2
+}

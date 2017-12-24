@@ -1,0 +1,194 @@
+.Explainer-headline {
+    margin-bottom: 1.5rem;
+    font-size: 4.2rem
+}
+
+@media (min-width:960px) {
+    .Explainer-headline {
+        font-size: 5rem
+    }
+}
+
+.Explainer-description {
+    margin-bottom: 0;
+    font-size: 2rem;
+    color: #82817d;
+    line-height: 1.4
+}
+
+@media (min-width:760px) {
+    .Explainer-description {
+        font-size: 2.4rem
+    }
+}
+
+.Explainer-description2 {
+    font-size: 2.4rem
+}
+
+@media (min-width:760px) {
+    .Explainer-description2 {
+        font-size: 2.8rem
+    }
+}
+
+.Explainer-bg {
+    background-color: #f3f1ee;
+    background-image: url("../images/pattern-tile.svg");
+    background-size: 44rem auto;
+    padding: 8rem 0
+}
+
+@media (min-width:760px) {
+    .Explainer-bg {
+        padding: 12rem 0
+    }
+}
+
+.Explainer-what {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 6.4rem 3.2rem 3.2rem;
+    background-color: #fff
+}
+
+@media (min-width:760px) {
+    .Explainer-what {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        max-width: 100%;
+        padding: 4rem
+    }
+}
+
+@media (min-width:960px) {
+    .Explainer-what {
+        padding: 6.4rem
+    }
+}
+
+.Explainer-ethKitty {
+    position: relative
+}
+
+.Explainer-ethKitty:after {
+    content: "";
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    right: 0;
+    width: 9.5rem;
+    height: 9.5rem;
+    margin: auto;
+    background-image: url("../images/ether-diamond.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top
+}
+
+.Explainer-ethKitty img {
+    width: 100%
+}
+
+@media (min-width:760px) {
+    .Explainer-ethKitty {
+        -ms-flex-preferred-size: 32rem;
+        flex-basis: 32rem;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1
+    }
+}
+
+.Explainer-what-text {
+    margin-top: 3.2rem
+}
+
+@media (min-width:760px) {
+    .Explainer-what-text {
+        -ms-flex-preferred-size: 60rem;
+        flex-basis: 60rem;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        margin-top: 0;
+        margin-left: 6.4rem
+    }
+}
+
+.Explainer-why {
+    padding: 12rem 0
+}
+
+@media (min-width:760px) {
+    .Explainer-why {
+        padding: 12rem 6.4rem
+    }
+}
+
+.Explainer-breed {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.Explainer-breedKitty {
+    -ms-flex-preferred-size: 31.5%;
+    flex-basis: 31.5%;
+    background-color: #fff
+}
+
+.Explainer-breedKitty img {
+    width: 100%
+}
+
+.Explainer-breedKitty--icons {
+    position: relative
+}
+
+.Explainer-breedKitty--icons:after,
+.Explainer-breedKitty--icons:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 15.5%;
+    height: 10rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%
+}
+
+.Explainer-breedKitty--icons:before {
+    left: -12%;
+    background-image: url("../icons/heartPinkLargest.svg")
+}
+
+.Explainer-breedKitty--icons:after {
+    right: -12%;
+    background-image: url("../icons/equals.svg")
+}
+
+.Explainer-cta {
+    padding: 8rem 0 12rem
+}

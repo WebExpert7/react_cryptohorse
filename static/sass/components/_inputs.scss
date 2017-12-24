@@ -1,0 +1,289 @@
+
+.InputButtons {
+    --font-size: 1.8rem;
+    --background-color: #fff;
+    --background-color-focus: #fff;
+    --border-color: #e7e6e4;
+    --border-color-focus: #ff9b6a;
+    --border-color-invalid: #f39db4;
+    --border-radius: .5rem;
+    position: relative
+}
+
+.InputButtons-input,
+.InputButtons-input[type=text] {
+    width: 100%;
+    font-size: var(--font-size);
+    border-color: var(--border-color);
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: background-color .5s
+}
+
+.InputButtons-input:focus,
+.InputButtons-input[type=text]:focus {
+    background-color: var(--background-color-focus);
+    border-color: var(--border-color-focus)
+}
+
+.InputButtons-input:focus~.InputButtons-buttons,
+.InputButtons-input[type=text]:focus~.InputButtons-buttons {
+    opacity: 1
+}
+
+.InputButtons-input.is-invalid,
+.InputButtons-input[type=text].is-invalid {
+    border-color: var(--border-color-invalid)
+}
+
+.InputButtons-buttons {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+@media (min-width:760px) {
+    .InputButtons-buttons {
+        display: none
+    }
+}
+
+.InputButtons-button {
+    display: inline-block;
+    padding: 0 .8rem;
+    height: 4.4rem;
+    background: transparent;
+    color: #82817d;
+    font-size: calc(var(--font-size) - .2rem);
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    outline: none;
+    vertical-align: top;
+    transition: color .3s
+}
+
+.InputButtons-button:hover {
+    color: #2a2825
+}
+
+.InputButtons-group {
+    text-align: left
+}
+
+.InputButtons-suggestions {
+    position: absolute;
+    top: calc(100% - .4rem);
+    width: 100%;
+    z-index: 10
+}
+
+.InputButtons--search {
+    --background-color: #f9f8f6;
+    --border-color: #f3f1ee;
+    --border-color-focus: #f3f1ee;
+    --border-color-invalid: #e7e6e4;
+    --border-radius: 0;
+    --padding-left: 4.16rem;
+    --background-position: 1.5rem center
+}
+
+@media (min-width:960px) {
+    .InputButtons--search {
+        --font-size: 1.8rem;
+        --right: calc(((100vw - 112rem) / 2) + 2.4rem);
+        --padding-left: calc(((100vw - 112rem) / 2) + 5rem);
+        --background-position: calc(((100vw - 112rem) / 2) + 2.4rem) center
+    }
+}
+
+.InputButtons--search>.InputButtons-input,
+.InputButtons--search>.InputButtons-input[type=text] {
+    border-left: 0;
+    border-right: 0;
+    border-width: 2px;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    padding-left: var(--padding-left);
+    background-repeat: no-repeat;
+    background-image: url("../icons/search.svg");
+    background-position: var(--background-position)
+}
+
+.InputButtons--search>.InputButtons-input::-webkit-input-placeholder,
+.InputButtons--search>.InputButtons-input[type=text]::-webkit-input-placeholder {
+    color: #9c9c9b
+}
+
+.InputButtons--search>.InputButtons-input[type=text]~.InputButtons-buttons,
+.InputButtons--search>.InputButtons-input~.InputButtons-buttons {
+    opacity: 1
+}
+
+.InputButtons--search>.InputButtons-input[type=text]~.InputButtons-buttons .InputButtons-button--primary,
+.InputButtons--search>.InputButtons-input~.InputButtons-buttons .InputButtons-button--primary {
+    display: none
+}
+
+.InputButtons--search>.InputButtons-input[type=text]~.InputButtons-buttons .InputButtons-button--dismiss,
+.InputButtons--search>.InputButtons-input~.InputButtons-buttons .InputButtons-button--dismiss {
+    display: block;
+    opacity: .5
+}
+
+.InputButtons--search>.InputButtons-input[type=text][value=""]~.InputButtons-buttons .InputButtons-button--dismiss,
+.InputButtons--search>.InputButtons-input[value=""]~.InputButtons-buttons .InputButtons-button--dismiss {
+    display: none
+}
+
+.InputButtons--search>.InputButtons-input:focus,
+.InputButtons--search>.InputButtons-input[type=text]:focus {
+    background-color: var(--background-color-focus);
+    border-color: var(--border-color-focus)
+}
+
+.InputButtons--search>.InputButtons-input:focus~.InputButtons-buttons .InputButtons-button--primary,
+.InputButtons--search>.InputButtons-input[type=text]:focus~.InputButtons-buttons .InputButtons-button--primary {
+    display: block
+}
+
+.InputButtons--search>.InputButtons-input:focus~.InputButtons-buttons .InputButtons-button--dismiss,
+.InputButtons--search>.InputButtons-input[type=text]:focus~.InputButtons-buttons .InputButtons-button--dismiss {
+    display: none
+}
+
+.InputButtons--searchSmall {
+    --background-color: transparent;
+    --border-color: #f3f1ee;
+    --border-color-focus: #e7e6e4;
+    --border-color-invalid: #f3f1ee;
+    --border-radius: .5rem;
+    margin-top: 0
+}
+
+@media (min-width:760px) {
+    .InputButtons--searchSmall {
+        margin-top: 0;
+        display: inline-block
+    }
+}
+
+.InputButtons--searchSmall>.InputButtons-input,
+.InputButtons--searchSmall>.InputButtons-input[type=text] {
+    width: 100%;
+    padding: 1.3rem 2.4rem;
+    padding-left: 4.6rem;
+    border-width: .2rem;
+    background-repeat: no-repeat;
+    background-image: url("../icons/search.svg");
+    background-position: 1.8rem;
+    transition: width .3s, border-color .3s, border-radius .2s
+}
+
+.InputButtons--searchSmall>.InputButtons-input::-webkit-input-placeholder,
+.InputButtons--searchSmall>.InputButtons-input[type=text]::-webkit-input-placeholder {
+    color: #9c9c9b
+}
+
+@media (min-width:760px) {
+    .InputButtons--searchSmall>.InputButtons-input,
+    .InputButtons--searchSmall>.InputButtons-input[type=text] {
+        width: 30rem;
+        padding-right: 13.5rem;
+        background-image: url("../icons/searchActive.svg")
+    }
+    .InputButtons--searchSmall>.InputButtons-input[type=text]~.InputButtons-buttons,
+    .InputButtons--searchSmall>.InputButtons-input~.InputButtons-buttons {
+        display: block
+    }
+    .InputButtons--searchSmall>.InputButtons-input::-webkit-input-placeholder,
+    .InputButtons--searchSmall>.InputButtons-input[type=text]::-webkit-input-placeholder {
+        color: #fff
+    }
+    .InputButtons--searchSmall>.InputButtons-input[type=text][value=""],
+    .InputButtons--searchSmall>.InputButtons-input[value=""] {
+        --border-radius: 2.25rem;
+        width: 22rem;
+        padding-right: 2.4rem;
+        background-image: url("../icons/search.svg")
+    }
+    .InputButtons--searchSmall>.InputButtons-input[type=text][value=""]~.InputButtons-buttons,
+    .InputButtons--searchSmall>.InputButtons-input[value=""]~.InputButtons-buttons {
+        display: none
+    }
+    .InputButtons--searchSmall>.InputButtons-input[type=text][value=""]::-webkit-input-placeholder,
+    .InputButtons--searchSmall>.InputButtons-input[value=""]::-webkit-input-placeholder {
+        color: #e7e6e4
+    }
+}
+
+@media (min-width:960px) {
+    .InputButtons--searchSmall>.InputButtons-input,
+    .InputButtons--searchSmall>.InputButtons-input[type=text] {
+        width: 50rem
+    }
+}
+
+.InputButtons--searchSmall>.InputButtons-input:hover,
+.InputButtons--searchSmall>.InputButtons-input[type=text]:hover {
+    border-color: #e7e6e4
+}
+
+.InputButtons--searchSmall>.InputButtons-input:focus,
+.InputButtons--searchSmall>.InputButtons-input[type=text]:focus {
+    --border-radius: .5rem;
+    padding-right: 13.5rem;
+    color: #2a2825;
+    background-image: url("../icons/searchActive.svg")
+}
+
+@media (min-width:760px) {
+    .InputButtons--searchSmall>.InputButtons-input:focus,
+    .InputButtons--searchSmall>.InputButtons-input[type=text]:focus {
+        width: 30rem
+    }
+}
+
+@media (min-width:960px) {
+    .InputButtons--searchSmall>.InputButtons-input:focus,
+    .InputButtons--searchSmall>.InputButtons-input[type=text]:focus {
+        width: 50rem
+    }
+}
+
+.InputButtons--searchSmall>.InputButtons-input:focus~.InputButtons-buttons,
+.InputButtons--searchSmall>.InputButtons-input[type=text]:focus~.InputButtons-buttons {
+    display: block
+}
+
+.InputButtons--searchSmall>.InputButtons-input:focus::-webkit-input-placeholder,
+.InputButtons--searchSmall>.InputButtons-input[type=text]:focus::-webkit-input-placeholder {
+    color: #fff
+}
+
+.InputButtons--readonly {
+    --background-color: #f3f1ee;
+    --background-color-focus: #f3f1ee;
+    --border-color: #f3f1ee;
+    --border-color-focus: #f3f1ee;
+    pointer-events: none;
+    font-weight: 400
+}
+
+.InputButtons--readonly>.InputButtons-buttons {
+    opacity: 1;
+    right: .6rem
+}
+
+.InputButtons--readonly .InputButtons-button {
+    background-color: #fff;
+    padding: 0 1.5rem
+}

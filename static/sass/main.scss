@@ -1,0 +1,182 @@
+//Typography (Fonts)
+@import "typography/fonts";
+//Base style
+//Normalize + Base styles + csshake
+@import "base/normalize";
+@import "base/base";
+@import "base/csshake";
+//Layouts
+@import "layouts/header";
+@import "layouts/footer";
+//Components
+@import "components/supportLink";//Support button
+@import "components/landing";//Home page style
+@import "components/explainer";//Home page style
+@import "components/toolTipNew";
+@import "components/slideAnimation";
+@import "components/networkStatus";
+@import "components/containers";//Main container
+@import "components/hero";
+@import "components/faqPage";//Faq page style
+@import "components/aboutPage";//About page style
+@import "components/kittyPage";
+@import "components/subPageNav";
+@import "components/pagination";
+@import "components/alerts";
+@import "components/toolTip";
+@import "components/pressPage";
+@import "components/technicalPage";
+@import "components/loader";
+@import "components/note";
+@import "components/filters";
+@import "components/inputs";
+@import "components/announcement";
+@import "components/searchSuggestions";
+@import "components/browsePage";
+@import "components/listAttributes";
+@import "components/reportPage";
+@import "components/icons";
+@import "components/modal";
+@import "components/auctionGraph";
+@import "components/auctionForm";
+@import "components/tabs";
+@import "components/sexyTime";
+@import "components/activityPage";
+@import "components/invitePage";
+@import "components/copyAdress";
+@import "components/transaction";
+
+@-webkit-keyframes rollEgg {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    2% {
+        -webkit-transform: rotate(7deg);
+        transform: rotate(7deg)
+    }
+    6% {
+        -webkit-transform: rotate(-7deg);
+        transform: rotate(-7deg)
+    }
+    10% {
+        -webkit-transform: rotate(7deg);
+        transform: rotate(7deg)
+    }
+    14% {
+        -webkit-transform: rotate(-7deg);
+        transform: rotate(-7deg)
+    }
+    16% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes rollEgg {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    2% {
+        -webkit-transform: rotate(7deg);
+        transform: rotate(7deg)
+    }
+    6% {
+        -webkit-transform: rotate(-7deg);
+        transform: rotate(-7deg)
+    }
+    10% {
+        -webkit-transform: rotate(7deg);
+        transform: rotate(7deg)
+    }
+    14% {
+        -webkit-transform: rotate(-7deg);
+        transform: rotate(-7deg)
+    }
+    16% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+
+.NullCat-dot1 {
+    -webkit-animation: dots .5s ease-out alternate infinite;
+    animation: dots .5s ease-out alternate infinite
+}
+
+.NullCat-dot2 {
+    -webkit-animation: dots .5s .15s ease-out alternate infinite;
+    animation: dots .5s .15s ease-out alternate infinite
+}
+
+.NullCat-dot3 {
+    -webkit-animation: dots .5s .3s ease-out alternate infinite;
+    animation: dots .5s .3s ease-out alternate infinite
+}
+
+@-webkit-keyframes dots {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+    to {
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0)
+    }
+}
+
+@keyframes dots {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+    to {
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0)
+    }
+}
+
+
+
+
+
+
+.CattributesPage {
+    padding-bottom: 6.4rem
+}
+
+
+.CopyShare {
+    cursor: pointer
+}
+
+
+.Separator {
+    display: inline-block;
+    background-image: url("../icons/dot-separator.svg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    padding: .8rem;
+    vertical-align: middle
+}
+
+
+
+
+
+
+
+
+
+
+

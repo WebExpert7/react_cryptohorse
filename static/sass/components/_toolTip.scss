@@ -1,0 +1,43 @@
+.Tooltip {
+    display: inline-block;
+    position: relative;
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 2px solid #e7e6e4;
+    border-radius: .4rem;
+    box-shadow: 0 .3rem 0 0 #e7e6e4;
+    word-wrap: break-word;
+    -webkit-animation: slideUp .4s forwards;
+    animation: slideUp .4s forwards
+}
+
+.Tooltip:after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-left: 2px solid #e7e6e4;
+    border-bottom: 2px solid #e7e6e4;
+    background-color: #fff;
+    -webkit-transform: translate(-.7rem, -50%) rotate(45deg);
+    transform: translate(-.7rem, -50%) rotate(45deg);
+    content: "";
+    z-index: 10
+}
+
+.Tooltip--noBreak {
+    word-break: normal;
+    white-space: nowrap
+}
+
+.Tooltip--arrowTop:after {
+    top: 2.5rem
+}
+
+.Tooltip p {
+    font-size: 1.4rem;
+    margin: .4rem 0 0
+}
+
