@@ -16,7 +16,7 @@ const Footer = () => {
             <div className={cx('Footer-primary')}>
                 <div className={cx('Footer-nav','Footer-nav--primary')}>
                     <ul className={cx('Footer-nav-items')}>
-                        <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--mykitties')} aria-current="false">My Kitties</a></li>
+                        <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--mykitties')} aria-current="false">My Ponies</a></li>
                         <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--activity')} aria-current="false">Activity</a></li>
                         <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--marketplace')} aria-current="false" href="marketplace">Marketplace</a></li>
                     </ul>

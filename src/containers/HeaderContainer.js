@@ -18,9 +18,10 @@ class HeaderContainer extends Component {
     const { handleButtonClick } = this;
     const { container_half } = this.props;
     const { Container__full } = this.props;
+    const { metastatus } = this.props;
     return (
       <div>
-        <Header onClickButton={handleButtonClick} container_half={container_half} Container__full={Container__full}/>
+        <Header onClickButton={handleButtonClick} container_half={container_half} Container__full={Container__full} metastatus={metastatus}/>
       </div>
     );
   }

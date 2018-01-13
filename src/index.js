@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './Root';
+import  { Redirect } from 'react-router-dom'
 import 'styles/main.scss';
 import registerServiceWorker from './registerServiceWorker';
 import store from 'store';
 import { AppContainer as HotContainer } from 'react-hot-loader';
+import { LandingPage, MacketPlace } from 'components';
 // import social from 'lib/social';
 // import socket from 'lib/socket';
 
@@ -17,14 +19,22 @@ import { AppContainer as HotContainer } from 'react-hot-loader';
 
 // window.socket = socket;
 
-const render = (Component) => ReactDOM.render(
-  (
-    <HotContainer>
-      <Component store={store}/>
-    </HotContainer>
-  ), 
-  document.getElementById('root')
-);
+
+const render = (Component) => {
+  const redirectPath = () => {
+    return (
+        alert("asdf")
+    )
+  };
+  ReactDOM.render(
+    (
+        <HotContainer>
+            <Component store={store}/>
+        </HotContainer>
+    ), 
+    document.getElementById('root')
+  );
+}
 
 render(Root);
 
