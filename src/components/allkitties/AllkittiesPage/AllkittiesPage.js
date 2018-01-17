@@ -39,15 +39,15 @@ export default class AllkittiesPage extends React.Component {
                                             <div className={cx('KittyCard-status')}>
                                                 <div className={cx('KittyStatus')}>
                                                     <div className={cx('KittyStatus-item')}>         
-                                                        <span className={cx('KittyStatus-itemText')}>For sale<span className={cx('KittyStatus-note')}>
-                                                            <small>Ξ</small>0.0599</span>
+                                                        <span className={cx('KittyStatus-itemText')}>Pony<span className={cx('KittyStatus-note')}>
+                                                            <small></small># 107576</span>
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className={cx('KittyCard-details')}>
-                                            <div className={cx('KittyCard-subname')}>Kitty 288755</div>
+                                            <div className={cx('KittyCard-subname')}>Fast</div>
                                             <div className={cx('KittyCard-coldown')}></div>
                                         </div>
                                     </div>

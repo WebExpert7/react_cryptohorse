@@ -47,9 +47,9 @@ export default class LandingPage extends React.Component {
                         <h1 className={cx('Landing-headline')}>Bet.</h1>
                         <p className={cx('Landing-subheadline')}>Collect and breed digital ponies.</p><button className={cx('Button','Button--largest','Button--love','Button--cta')} onClick={this.handleClick} aria-current="false">Start Now</button></div>
                     <div className={cx('Landing-slots')}>
-                        <div className={cx('Landing-pattern')}><img className={cx('landing_horse')} src={landing_horse01} alt="" /><img className={cx('landing_horse')} src={landing_horse02} alt="" /><img className={cx('landing_horse')} src={landing_horse03} alt="" /><img className={cx('landing_horse')} src={landing_horse04} alt="" /><img className={cx('landing_horse')} src={landing_horse05} alt="" /><img className={cx('landing_horse')} src={landing_horse04} alt="" /><img className={cx('landing_horse')} src={landing_horse06} alt="" /><img className={cx('landing_horse')} src={landing_horse07} alt="" /><img className={cx('landing_horse')} src={landing_horse08} alt="" /></div>
-                        <div className={cx('Landing-pattern')}><img className={cx('landing_horse')} src={landing_horse06} alt="" /><img className={cx('landing_horse')} src={landing_horse07} alt="" /><img className={cx('landing_horse')} src={landing_horse08} alt="" /><img className={cx('landing_horse')} src={landing_horse09} alt="" /><img className={cx('landing_horse')} src={landing_horse11} alt="" /><img className={cx('landing_horse')} src={landing_horse05} alt="" /><img className={cx('landing_horse')} src={landing_horse02} alt="" /><img className={cx('landing_horse')} src={landing_horse03} alt="" /><img className={cx('landing_horse')} src={landing_horse06} alt="" /></div>
-                        <div className={cx('Landing-pattern')}><img className={cx('landing_horse')} src={landing_horse11} alt="" /><img className={cx('landing_horse')} src={landing_horse12} alt=""/><img className={cx('landing_horse')} src={landing_horse01} alt="" /><img className={cx('landing_horse')} src={landing_horse02} alt="" /><img className={cx('landing_horse')} src={landing_horse03} alt="" /><img className={cx('landing_horse')} src={landing_horse06} alt="" /><img className={cx('landing_horse')} src={landing_horse01} alt="" /><img className={cx('landing_horse')} src={landing_horse02} alt="" /><img className={cx('landing_horse')} src={landing_horse03} alt="" /></div>
+                        <div className={cx('Landing-pattern')}><img className={cx('landing_horse')} src={landing_horse02} alt="" /><img className={cx('landing_horse')} src={landing_horse11} alt="" /><img className={cx('landing_horse')} src={landing_horse01} alt="" /><img className={cx('landing_horse')} src={landing_horse12} alt="" /><img className={cx('landing_horse')} src={landing_horse07} alt="" /><img className={cx('landing_horse')} src={landing_horse04} alt="" /><img className={cx('landing_horse')} src={landing_horse07} alt="" /><img className={cx('landing_horse')} src={landing_horse07} alt="" /><img className={cx('landing_horse')} src={landing_horse08} alt="" /></div>
+                        <div className={cx('Landing-pattern')}><img className={cx('landing_horse')} src={landing_horse07} alt="" /><img className={cx('landing_horse')} src={landing_horse05} alt="" /><img className={cx('landing_horse')} src={landing_horse04} alt="" /><img className={cx('landing_horse')} src={landing_horse08} alt="" /><img className={cx('landing_horse')} src={landing_horse11} alt="" /><img className={cx('landing_horse')} src={landing_horse05} alt="" /><img className={cx('landing_horse')} src={landing_horse02} alt="" /><img className={cx('landing_horse')} src={landing_horse03} alt="" /><img className={cx('landing_horse')} src={landing_horse06} alt="" /></div>
+                        <div className={cx('Landing-pattern')}><img className={cx('landing_horse')} src={landing_horse03} alt="" /><img className={cx('landing_horse')} src={landing_horse10} alt=""/><img className={cx('landing_horse')} src={landing_horse06} alt="" /><img className={cx('landing_horse')} src={landing_horse09} alt="" /><img className={cx('landing_horse')} src={landing_horse03} alt="" /><img className={cx('landing_horse')} src={landing_horse06} alt="" /><img className={cx('landing_horse')} src={landing_horse01} alt="" /><img className={cx('landing_horse')} src={landing_horse02} alt="" /><img className={cx('landing_horse')} src={landing_horse03} alt="" /></div>
                     </div>
                 </div>
                 <div className={cx('Explainer')}>
@@ -58,8 +58,8 @@ export default class LandingPage extends React.Component {
                             <div className={cx('Explainer-what')}>
                                 <div className={cx('Explainer-ethKitty')}><img src={kitty_eth} alt="" /></div>
                                 <div className={cx('Explainer-what-text')}>
-                                    <h2 className={cx('Explainer-headline')}>What is ponies?</h2>
-                                    <p className={cx('Explainer-description')}>ponies is a game centered around breedable, collectible, and oh-so-adorable creatures we call ponies! Each pony is one-of-a-kind and 100% owned by you; it cannot be replicated, taken away, or destroyed.</p>
+                                    <h2 className={cx('Explainer-headline')}>What is Pony?</h2>
+                                    <p className={cx('Explainer-description')}>Pony is a game centered around breedable, collectible, and oh-so-adorable creatures we call Pony! Each pony is one-of-a-kind and 100% owned by you; it cannot be replicated, taken away, or destroyed.</p>
                                 </div>
                             </div>
                         </div>
@@ -67,21 +67,21 @@ export default class LandingPage extends React.Component {
                     <div className={cx('Container','Container--center')}>
                         <div className={cx('Explainer-why')}>
                             <h2 className={cx('Explainer-headline')}>What’s the big deal?</h2>
-                            <p className={cx('Explainer-description')}>ponies is one of the world’s first games to be built on blockchain technology—the same breakthrough that makes things like Bitcoin and Ethereum possible. Bitcoin and ether are cryptocurrencies but ponies are cryptocollectibles. You can buy, sell, or trade your ponies like it was a traditional collectible, secure in the knowledge that blockchain will track ownership securely.</p>
+                            <p className={cx('Explainer-description')}>CryptoPony is one of the world’s first horse racing games to be built on blockchain technology—the same breakthrough that makes things like Bitcoin and Ethereum possible. Bitcoin and ether are cryptocurrencies but ponies are cryptocollectibles. You can buy, sell, or trade your ponies like it was a traditional collectible, secure in the knowledge that blockchain will track ownership securely.</p>
                         </div>
                     </div>
                     <div className={cx('Explainer-bg')}>
                         <div className={cx('Container','Container--lg')}>
                             <div className={cx('Explainer-breed')}>
-                                <div className={cx('Explainer-breedKitty')}><img src={kitty_love_1} alt="" /></div>
-                                <div className={cx('Explainer-breedKitty','Explainer-breedKitty--icons')}><img src={kitty_love_2} alt="" /></div>
-                                <div className={cx('Explainer-breedKitty')}><img src={kitty_love_3} alt="" /></div>
+                                <div className={cx('Explainer-breedKitty', 'famale_pony', 'image_70')}><img className={cx('image_70_img')} src={kitty_love_2} alt="" /></div>
+                                <div className={cx('Explainer-breedKitty', 'Explainer-breedKitty--icons', 'male_pony', 'image_70')}><img className={cx('image_70_img')} src={kitty_love_1} alt="" /></div>
+                                <div className={cx('Explainer-breedKitty', 'result_pony', 'image_70')}><img className={cx('image_70_img')} src={kitty_love_3} alt="" /></div>
                             </div>
                         </div>
                     </div>
                     <div className={cx('Container','Container--center')}>
                         <div className={cx('Explainer-cta')}>
-                            <p className={cx('Explainer-description2')}>But, unlike traditional collectibles, you can breed two ponies to create a brand-new, genetically unique offspring.</p>
+                            <p className={cx('Explainer-description2')}>You can also send your ponies to racing and bet on which pony will win  races!  Stay follow us and stay tuned.</p>
                             <p className={cx('Explainer-description2')}><strong>It results in something special—just like you!</strong></p><button className={cx('Button','Button-largest','Button--love','Button--cta')} onClick={this.handleClick} aria-current="false"> Start Now </button></div>
                     </div>
                 </div>

@@ -1017,6 +1017,202 @@
     -webkit-animation-delay: 5s;
     animation-delay: 5s
 }
+
+.KittyCard-status {
+    position: absolute;
+    z-index: 3;
+    top: 10%;
+    left: 39%;
+    padding: var(--padding-status);
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.KittyCard-details {
+    padding: .8rem .2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #82817d
+}
+
+.KittyCard-name {
+    width: 100%;
+    height: 2.7rem;
+    font-size: 1.8rem;
+    color: #2a2825;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.KittyCard--thumbnail {
+    --size-card: 12rem;
+    --size-image: 12rem;
+    --width-shadow: 4rem;
+    --translate-shadow: 1.5rem;
+    --translate-image: -3%
+}
+
+.KittyCard--thumbnail>.KittyCard-status,
+.KittyCard--thumbnail~.KittyCard-details {
+    display: none
+}
+
+.KittyStatus {
+    position: relative;
+    display: inline-block;
+    padding: .5rem 1rem 0;
+    height: 3rem;
+    border-radius: 3.2rem;
+    color: #0b0b0b;
+    font-size: 1.4rem;
+    font-weight: 500;
+    background-color: hsla(0, 0%, 100%, .4);
+    background-blend-mode: soft-light;
+    white-space: nowrap
+}
+
+.KittyStatus:after {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: .5rem .4rem 0;
+    border-color: hsla(0, 0%, 100%, .4) transparent transparent;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    content: ""
+}
+
+.KittyStatus-itemText {
+    padding-left: .8rem;
+    padding-right: .5rem;
+    display: inline-block;
+    cursor: default
+}
+
+.KittyStatus-note {
+    margin-left: .5rem;
+    opacity: .5
+}
+
+.KittyStatus--multiple .KittyStatus-item>.KittyStatus-itemText {
+    max-width: 0;
+    padding: 0;
+    overflow: hidden;
+    vertical-align: top;
+    transition: max-width .4s cubic-bezier(.06, .67, .37, .99), padding .4s;
+    transition-delay: .1s
+}
+
+.KittyStatus--multiple .KittyStatus-item:hover>.KittyStatus-itemText {
+    max-width: 15rem;
+    padding-left: .4rem
+}
+
+.KittyStatus--multiple .KittyStatus-item:hover:last-child>.KittyStatus-itemText {
+    padding-right: .5rem
+}
+
+
+.KittyStatus-item {
+    display: inline-block;
+    padding-left: .8rem
+}
+
+.KittyStatus-item:first-child {
+    padding: 0
+}
+
+.KittyStatus-itemIcon {
+    vertical-align: sub
+}
+
+.Icon {
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.6rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%
+}
+
+.Icon--tag {
+    background-image: url("static/image/tag.svg")
+}
+
+.KittyStatus-itemText {
+    padding-left: .8rem;
+    padding-right: .5rem;
+    display: inline-block;
+    cursor: default
+}
+
+.KittyStatus-note {
+    margin-left: .5rem;
+    opacity: .5
+}
+
+.KittyStatus--multiple .KittyStatus-item>.KittyStatus-itemText {
+    max-width: 0;
+    padding: 0;
+    overflow: hidden;
+    vertical-align: top;
+    transition: max-width .4s cubic-bezier(.06, .67, .37, .99), padding .4s;
+    transition-delay: .1s
+}
+
+.KittyStatus--multiple .KittyStatus-item:hover>.KittyStatus-itemText {
+    max-width: 15rem;
+    padding-left: .4rem
+}
+
+.KittyStatus--multiple .KittyStatus-item:hover:last-child>.KittyStatus-itemText {
+    padding-right: .5rem
+}
+
+.KittyStatus--list {
+    display: block;
+    background-color: transparent;
+    padding: 0;
+    height: auto;
+    width: 0;
+    white-space: normal
+}
+
+.KittyStatus--list:after {
+    display: none
+}
+
+.KittyStatus--list .KittyStatus-item {
+    display: inline-block;
+    position: relative;
+    padding: .5rem 1rem 0;
+    height: 3rem;
+    margin-bottom: .6rem;
+    background-color: hsla(0, 0%, 100%, .4);
+    background-blend-mode: soft-light;
+    border-radius: 3.2rem;
+    white-space: nowrap
+}
+
+@media (min-width:960px) {
+    .KittyStatus--list .KittyStatus-item {
+        padding: .5rem 1.3rem 0;
+        height: 3.4rem
+    }
+}
+
+@media (min-width:960px) {
+    .KittyStatus--list .KittyStatus-itemText {
+        font-size: 1.6rem
+    }
+}
+
 @-webkit-keyframes kittyCardIn {
     0% {
         opacity: 0;

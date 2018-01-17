@@ -201,8 +201,9 @@
 .Explainer-bg {
     background-color: #f3f1ee;
     background-image: url('static/image/pattern-tile.png');
-    background-size: 44rem auto;
-    padding: 8rem 0
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
 }
 
 @media (min-width:760px) {
@@ -318,8 +319,38 @@
 
 .Explainer-breedKitty {
     -ms-flex-preferred-size: 31.5%;
-    flex-basis: 31.5%;
+    flex-basis: 32.5%;
     background-color: #fff
+}
+
+.image_70{
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image_70_img{
+    width: 70% !important;
+    height: 70% !important;
+}
+
+
+.famale_pony {
+    background-color: #fccfea;
+}
+
+.male_pony{
+    background-color: #a4c4ff;
+}
+
+.result_pony{
+    background-color: #eed396;
 }
 
 .Explainer-breedKitty img {

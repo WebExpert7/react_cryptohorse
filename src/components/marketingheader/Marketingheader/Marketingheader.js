@@ -8,7 +8,7 @@ const Marketing_header = ({type}) => {
     <div className={cx('marketing_header')}>
         <div className={cx('Container','Container--lg','Container--spread')}>
                   <div className={cx('InputButtons','InputButtons--searchSmall')}>
-                      <input type="text" className={cx('InputButtons-input')} placeholder="Search Kitties..." value="" maxlength="60" />
+                      <input type="text" className={cx('InputButtons-input')} placeholder="Search Ponies..." value="" maxlength="60" />
                       <div className={cx('InputButtons-buttons')}>
                           <button className={cx('InputButtons-button','InputButtons-button--primary')}>Search</button>
                           <button className={cx('InputButtons-button','InputButtons-button--dismiss')}>Clear</button>

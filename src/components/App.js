@@ -5,10 +5,11 @@ import { Route } from 'react-router-dom';
 const baseUrl = process.env.PUBLIC_URL;
 class App extends Component {
   
+  
   render() {
     return (
       <div>
-      <Web3Provider>
+      <Web3Provider passive="true"  >
         <Route exact path="/" component={LandingPage}/>
         <Route path={baseUrl + "/signin"} component={SigninPage}/>
         <Route path={baseUrl + "/about"} component={AboutPage}/>

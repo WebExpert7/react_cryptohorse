@@ -31,9 +31,9 @@ const Footer = () => {
                 </div>
                 <div className={cx('Footer-nav','Footer-nav--social')}>
                     <ul className={cx('Footer-nav-items')}>
-                        <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--facebook')} target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--facebook')} target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/CryptoPonies/">Facebook</a></li>
                         <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--reddit')} target="_blank" rel="noopener noreferrer">Reddit</a></li>
-                        <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--twitter')} target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                        <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--twitter')} target="_blank" rel="noopener noreferrer" href="https://twitter.com/CryptoPonies">Twitter</a></li>
                         <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--discord')} target="_blank" rel="noopener noreferrer">Discord</a></li>
                     </ul>
                 </div>

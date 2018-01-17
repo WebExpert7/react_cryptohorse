@@ -35,20 +35,24 @@ export default class IcoPage extends React.Component {
                                 <a aria-current="false" href="/kitty/{{ kitty[$index].kitty_id }}">
                                     <div className={cx('KittyCard-wrapper')}>
                                         <div className={cx('KittyCard','u-bg-alt-topaz','KittyCard--responsive')}>
-                                            <img className={cx('KittyCard-image')} src={kitty_love_1} alt="Kitty {{ kitty[$index].kitty_id }} - null" />
-                                            <div className={cx('KittyCard-status')}>
-                                                <div className={cx('KittyStatus')}>
-                                                    <div className={cx('KittyStatus-item')}>         
-                                                        <span className={cx('KittyStatus-itemText')}>For sale<span className={cx('KittyStatus-note')}>
-                                                            <small>Ξ</small>0.0599</span>
-                                                        </span>
+                                            <div className={cx('KittyCard','u-bg-alt-topaz','KittyCard--responsive','KittyCard--shadow-topaz')}>
+                                                <img className={cx('KittyCard-image')} src={kitty_love_1} alt="Kitty {{ kitty[$index].kitty_id }} - null" />
+                                                <div className={cx('KittyCard-status')}>
+                                                    <div className={cx('KittyStatus')}>
+                                                        <div className={cx('KittyStatus-item')}>
+                                                            <span className={cx('KittyStatus-itemIcon')}><i className={cx('Icon','Icon--tag')}></i></span>
+                                                            <span className={cx('KittyStatus-itemText')}>For sale<span className={cx('KittyStatus-note')}><small>Ξ</small>0.3024</span></span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className={cx('KittyCard-details')}>
-                                            <div className={cx('KittyCard-subname')}>Kitty 288755</div>
-                                            <div className={cx('KittyCard-coldown')}></div>
+                                            <div className={cx('KittyCard-details')}>
+                                                <span className={cx('KittyCard-details-item','KittyCard-details-item--highlight')}>Pony # 464871</span>
+                                            </div>
+                                            <div className={cx('KittyCard-details')}>
+                                                <div className={cx('KittyCard-subname')}>Fast</div>
+                                                <div className={cx('KittyCard-coldown')}></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>

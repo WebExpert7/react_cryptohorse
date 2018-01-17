@@ -30,6 +30,7 @@ export default class SigninPage extends React.Component {
             email: e.target.value,
         });
       }
+      
       handlnicknameChange(e) {
         this.setState({
             nickname: e.target.value,
