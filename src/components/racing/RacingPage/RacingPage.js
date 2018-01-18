@@ -88,23 +88,77 @@ export default class RacingPage extends React.Component {
     }
 
     claimClick() {
+        this.setState({keyword : ""});
+        this.setState({click_button_result : ""});
+        if (this.web3.currentProvider.publicConfigStore._state.networkVersion != 3){
+            alert("Change your Metamask status to 'Ropsten Test Network'!");
+            return 0;
+        }
+        this.setState({keyword : ""});
+        this.setState({transaction_result : "Requesting for my Result..."});
+        this.setState({click_button_result : "Requesting for my Result..."});
+        const contract_address = '0x7ae22542f359e4bef02b88e99d20ffdf0ccc7ce5';
+        const selected_address = this.web3.eth.accounts[0];
+        const full_object = this;
+        const contractABI = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balances","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"withdraw","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"to","type":"address"},{"name":"value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"recipient","type":"address"}],"name":"deposit","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"sender","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"LogDeposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"receiver","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"LogWithdrawal","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"sender","type":"address"},{"indexed":false,"name":"to","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"LogTransfer","type":"event"}];
+        const contract = this.web3.eth.contract(contractABI);
+        const myContractInstance = contract.at(contract_address);
+        const getData = myContractInstance.withdraw.getData();
+        this.web3.eth.sendTransaction({to:contract_address, from:selected_address, data: getData
+            }, function(error, result) {
+                if (error){
+                    full_object.setState({transaction_result : ""});
+                }
+                else{
+                    var interval = setInterval(function(){
+                        full_object.web3.eth.getTransactionReceipt(result, function(err, transaction) {
+                            console.info(transaction);
+                            if(transaction !== null)
+                            {
+                                if(transaction.status == 0x1)
+                                {
+                                    clearInterval(interval);
+                                    console.log("Request success");
+                                    full_object.setState({transaction_result : 'Transaction ID : '+result, click_button_result : 'Succeed! Check your ETH wallet!'});
+                                    full_object.setState({keyword : "This is a test version, So we refund all of your ETH"});
+                                }
+                                else
+                                {   
+                                    clearInterval(interval);
+                                    console.log("transaction failed");
+                                    full_object.setState({transaction_result : 'Transaction error. Retry!'});
+                                }
+                            }
+                        });
+                    }, 3000);
+                    /* full_object.setState({transaction_result : 'Transaction ID : '+result, click_button_result : 'Click "CLAIM" Button. You will get the ETH on your current wallet!'}); */
+                }
+                console.log(error, result);
+            });
+        console.log(getData);
         
     }
 
     amountClick() {
+        this.setState({keyword : ""});
+        this.setState({click_button_result : ""});
         if (this.state.amount<0.1 || this.state.amount>1){
             this.state.amount=0.1;
             alert("Bet minimum 0.1 ETH and a maximum of 1 ETH");
             return 0;
         }
+        else if (this.web3.currentProvider.publicConfigStore._state.networkVersion != 3){
+            alert("Change your Metamask status to 'Ropsten Test Network'!");
+            return 0;
+        }
         else {
             this.setState({transaction_result : "Placing Bet..."});
             this.setState({click_button_result : ""});
-            const transaction_address = '0x4769709c353F673f3D010A7A345bDa8de55F1cE4';
+            const contract_address = '0x7ae22542f359e4bef02b88e99d20ffdf0ccc7ce5';
             const full_object = this;
             this.web3.eth.sendTransaction({
                 from: this.web3.eth.accounts[0],
-                to: transaction_address,
+                to: contract_address,
                 value: this.web3.toWei(this.state.amount, "ether")
             }, function(error, result) {
                 console.log(error, result);
@@ -130,13 +184,13 @@ export default class RacingPage extends React.Component {
                                     full_object.setState({transaction_result : 'Transaction error. Retry!'});
                                 }
                             }
-                            
                         });
                     }, 3000);
                     /* full_object.setState({transaction_result : 'Transaction ID : '+result, click_button_result : 'Click "CLAIM" Button. You will get the ETH on your current wallet!'}); */
                 }
             });
-            // console.log(this.web3);
+            console.log(this.web3);
+            // console.log(this.web3.currentProvider.publicConfigStore._state.networkVersion);
         }
     }
     
