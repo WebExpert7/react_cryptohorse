@@ -32,7 +32,7 @@ const Marketing_header = ({type}) => {
                             <span className={cx('Filter-tab','Filter-tab--active')}><a href="marketplace">For Sale</a></span>
                             <span className={cx('Filter-tab')}><a href="/siring">Siring</a></span>
                             <span className={cx('Filter-tab')}><a href="/gen0">Gen 0</a></span>
-                            <span className={cx('Filter-tab')}><a href="/all_kitties">All Kitties</a></span>
+                            <span className={cx('Filter-tab')}><a href="/all_kitties">All Ponies</a></span>
                             <span className={cx('Filter-tab')}><a href="/racing">Racing</a></span>
                             <span className={cx('Filter-tab')}><a href="/ico">ICO</a></span>
                         </div>
@@ -42,7 +42,7 @@ const Marketing_header = ({type}) => {
                             <span className={cx('Filter-tab')}><a href="marketplace">For Sale</a></span>
                             <span className={cx('Filter-tab','Filter-tab--active')}><a href="/siring">Siring</a></span>
                             <span className={cx('Filter-tab')}><a href="/gen0">Gen 0</a></span>
-                            <span className={cx('Filter-tab')}><a href="/all_kitties">All Kitties</a></span>
+                            <span className={cx('Filter-tab')}><a href="/all_kitties">All Ponies</a></span>
                             <span className={cx('Filter-tab')}><a href="/racing">Racing</a></span>
                             <span className={cx('Filter-tab')}><a href="/ico">ICO</a></span>
                         </div>
@@ -52,7 +52,7 @@ const Marketing_header = ({type}) => {
                             <span className={cx('Filter-tab')}><a href="marketplace">For Sale</a></span>
                             <span className={cx('Filter-tab')}><a href="/siring">Siring</a></span>
                             <span className={cx('Filter-tab','Filter-tab--active')}><a href="/gen0">Gen 0</a></span>
-                            <span className={cx('Filter-tab')}><a href="/all_kitties">All Kitties</a></span>
+                            <span className={cx('Filter-tab')}><a href="/all_kitties">All Ponies</a></span>
                             <span className={cx('Filter-tab')}><a href="/racing">Racing</a></span>
                             <span className={cx('Filter-tab')}><a href="/ico">ICO</a></span>
                         </div>
@@ -62,7 +62,7 @@ const Marketing_header = ({type}) => {
                             <span className={cx('Filter-tab')}><a href="marketplace">For Sale</a></span>
                             <span className={cx('Filter-tab')}><a href="/siring">Siring</a></span>
                             <span className={cx('Filter-tab')}><a href="/gen0">Gen 0</a></span>
-                            <span className={cx('Filter-tab','Filter-tab--active')}><a href="/all_kitties">All Kitties</a></span>
+                            <span className={cx('Filter-tab','Filter-tab--active')}><a href="/all_kitties">All Ponies</a></span>
                             <span className={cx('Filter-tab')}><a href="/racing">Racing</a></span>
                             <span className={cx('Filter-tab')}><a href="/ico">ICO</a></span>
                         </div>
@@ -72,7 +72,7 @@ const Marketing_header = ({type}) => {
                             <span className={cx('Filter-tab')}><a href="marketplace">For Sale</a></span>
                             <span className={cx('Filter-tab')}><a href="/siring">Siring</a></span>
                             <span className={cx('Filter-tab')}><a href="/gen0">Gen 0</a></span>
-                            <span className={cx('Filter-tab')}><a href="/all_kitties">All Kitties</a></span>
+                            <span className={cx('Filter-tab')}><a href="/all_kitties">All Ponies</a></span>
                             <span className={cx('Filter-tab','Filter-tab--active')}><a href="/racing">Racing</a></span>
                             <span className={cx('Filter-tab')}><a href="/ico">ICO</a></span>
                         </div>
@@ -82,7 +82,7 @@ const Marketing_header = ({type}) => {
                             <span className={cx('Filter-tab')}><a href="marketplace">For Sale</a></span>
                             <span className={cx('Filter-tab')}><a href="/siring">Siring</a></span>
                             <span className={cx('Filter-tab')}><a href="/gen0">Gen 0</a></span>
-                            <span className={cx('Filter-tab')}><a href="/all_kitties">All Kitties</a></span>
+                            <span className={cx('Filter-tab')}><a href="/all_kitties">All Ponies</a></span>
                             <span className={cx('Filter-tab')}><a href="/racing">Racing</a></span>
                             <span className={cx('Filter-tab','Filter-tab--active')}><a href="/ico">ICO</a></span>
                         </div>

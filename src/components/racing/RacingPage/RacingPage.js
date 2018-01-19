@@ -42,6 +42,9 @@ export default class RacingPage extends React.Component {
         this.state = {
             value: 1,
             selected: -1,
+            row_selected_state0: false,
+            row_selected_state1: false,
+            row_selected_state2: false,
             keyword: '',
             amount: 0.1,
             transaction_result: '',
@@ -60,7 +63,6 @@ export default class RacingPage extends React.Component {
 
         this.handleClick = this.handleClick.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.isSelected = this.isSelected.bind(this);
         this.handleRowSelection = this.handleRowSelection.bind(this);
         this.claimChange = this.claimChange.bind(this);
         this.claimClick = this.claimClick.bind(this);
@@ -125,8 +127,10 @@ export default class RacingPage extends React.Component {
             }, function(error, result) {
                 if (error){
                     full_object.setState({transaction_result : ""});
+                    full_object.state.selected = -1;
                 }
                 else{
+                    full_object.state.bet_button_state = true;
                     var interval = setInterval(function(){
                         full_object.web3.eth.getTransactionReceipt(result, function(err, transaction) {
                             console.info(transaction);
@@ -135,13 +139,17 @@ export default class RacingPage extends React.Component {
                                 if(transaction.status == 0x1)
                                 {
                                     clearInterval(interval);
+                                    full_object.state.bet_button_state = false;
+                                    full_object.state.selected = -1;
                                     console.log("Request success");
                                     full_object.setState({transaction_result : 'Transaction ID : '+result, click_button_result : 'Succeed! Check your ETH wallet!'});
-                                    full_object.setState({keyword : "This is a test version, So we refund all of your ETH"});
+                                    full_object.setState({keyword : "in mvp version we simply refund what you bet"});
                                 }
                                 else
                                 {   
+                                    full_object.state.bet_button_state = false;
                                     clearInterval(interval);
+                                    full_object.state.selected = -1;
                                     console.log("transaction failed");
                                     full_object.setState({transaction_result : 'Transaction error. Retry!'});
                                 }
@@ -168,9 +176,16 @@ export default class RacingPage extends React.Component {
             alert("Change your Metamask status to 'Ropsten Test Network'!");
             return 0;
         }
+
+        else if (this.state.selected === -1){
+            alert("Choose a Pony");
+            return 0;
+        }
+        
         else {
             this.setState({transaction_result : "Placing Bet..."});
             this.setState({click_button_result : ""});
+            this.state.selected = -1;
             const contract_address = '0x7ae22542f359e4bef02b88e99d20ffdf0ccc7ce5';
             const full_object = this;
             this.web3.eth.sendTransaction({
@@ -181,6 +196,7 @@ export default class RacingPage extends React.Component {
                 console.log(error, result);
                 if (error){
                     full_object.setState({transaction_result : ""});
+                    full_object.state.selected = -1;
                 }
                 else{
                     full_object.state.bet_button_state = true;
@@ -194,12 +210,14 @@ export default class RacingPage extends React.Component {
                                 {
                                     clearInterval(interval);
                                     full_object.state.bet_button_state = false;
+                                    full_object.state.selected = -1;
                                     console.log("transaction success");
                                     full_object.setState({transaction_result : 'Transaction ID : '+result, click_button_result : 'Click "CLAIM" Button. You will get the ETH on your current wallet!'});
                                 }
                                 else
                                 {   
                                     clearInterval(interval);
+                                    full_object.state.selected = -1;
                                     console.log("transaction failed");
                                     full_object.setState({transaction_result : 'Transaction error. Retry!'});
                                 }
@@ -218,14 +236,11 @@ export default class RacingPage extends React.Component {
         alert("this");
     }
 
-    isSelected(index) {
-        return this.state.selected == index;
-    };
-    
     handleRowSelection(selectedRows) {
         this.setState({
             selected: selectedRows[0],
         });
+        // console.log(selectedRows[0]);
     };
 
     
@@ -312,19 +327,19 @@ export default class RacingPage extends React.Component {
                                         </TableRow>
                                         </TableHeader>
                                         <TableBody>
-                                        <TableRow selected={this.isSelected(0)}>
+                                        <TableRow  selected={this.state.selected === 0}>
                                             <TableRowColumn><div><img className={cx('betting_image')} src={landing_horse07} alt="" /></div></TableRowColumn>
                                             <TableRowColumn>7</TableRowColumn>
                                             <TableRowColumn>15</TableRowColumn>
                                             <TableRowColumn className={cx('progress_background')}><span>{this.state.random_progres_value}%</span><Progress  completed={this.state.random_progres_value} /></TableRowColumn>
                                         </TableRow>
-                                        <TableRow selected={this.isSelected(1)}>
+                                        <TableRow  selected={this.state.selected === 1}>
                                             <TableRowColumn><img className={cx('betting_image')} src={landing_horse11} alt="" /></TableRowColumn>
                                             <TableRowColumn>5</TableRowColumn>
                                             <TableRowColumn>23</TableRowColumn>
                                             <TableRowColumn className={cx('progress_background')}><span>{this.state.random_progres_value1}%</span><Progress className={cx('progress_color_2')} completed={this.state.random_progres_value1} /></TableRowColumn>
                                         </TableRow>
-                                        <TableRow selected={this.isSelected(2)}>
+                                        <TableRow  selected={this.state.selected === 2}>
                                             <TableRowColumn><img className={cx('betting_image')} src={landing_horse02} alt="" /></TableRowColumn>
                                             <TableRowColumn>10</TableRowColumn>
                                             <TableRowColumn>19</TableRowColumn>
