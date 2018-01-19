@@ -26,7 +26,6 @@ const Footer = () => {
                         <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--faq')} aria-current="false" href="faq">FAQs</a></li>
                         <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--about')} aria-current="false" href="about">About</a></li>
                         <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--press')} aria-current="false" href="press">Press</a></li>
-                        <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--white-pa-purr')} target="_blank" rel="noopener noreferrer">White Pa-purr</a></li>
                     </ul>
                 </div>
                 <div className={cx('Footer-nav','Footer-nav--social')}>
@@ -34,7 +33,7 @@ const Footer = () => {
                         <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--facebook')} target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/CryptoPonies/">Facebook</a></li>
                         <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--reddit')} target="_blank" rel="noopener noreferrer">Reddit</a></li>
                         <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--twitter')} target="_blank" rel="noopener noreferrer" href="https://twitter.com/CryptoPonies">Twitter</a></li>
-                        <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--discord')} target="_blank" rel="noopener noreferrer">Discord</a></li>
+                        <li className={cx('Footer-nav-item')}><a className={cx('Footer-nav-link','Footer-nav-link--discord')} target="_blank" rel="noopener noreferrer" href="https://discordapp.com/invite/TYe6pJU">Discord</a></li>
                     </ul>
                 </div>
                 <div className={cx('Footer-primary-love')}>

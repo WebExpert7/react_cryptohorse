@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import { Web3Provider } from 'react-web3';
 import { LandingPage, SigninPage, AboutPage, technicaldetailPage, PressPage, MarketingPage, SigninstatusPage, SiringPage, Gen0Page, AllkittiesPage, RacingPage, IcoPage, InstallerPage } from 'components';
-import { Route } from 'react-router-dom';
+import { Redirect, Route } from 'react-router-dom';
+
+import Web3 from 'web3';
+
 const baseUrl = process.env.PUBLIC_URL;
-class App extends Component {
-  
+export default class App extends React.Component {
+
+  constructor(props, context){
+    super(props, context)
+    this.web3 =  new Web3(window.web3.currentProvider);
+  }
   
   render() {
     return (
@@ -28,5 +35,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

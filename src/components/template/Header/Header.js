@@ -53,9 +53,10 @@ export default class Header extends React.Component {
                 <div className={cx('Header-logoWrapper')}>
                     <div className={cx('Header-logo')}></div>
                 </div>
-                <h1 className={cx('Header-wordmark')}>CryptoPony</h1></a>
+                <h1 className={cx('Header-wordmark')}>CryptoPonies</h1></a>
             <nav className={cx('Header-navigation')}>
-                {status}
+                
+                <a className={cx('Header-navigation-item')} aria-current="false" href="/signin">Signin</a>
                 <a className={cx('Header-navigation-item')} aria-current="false" href="/marketplace">Marketplace</a>     
                 <a className={cx('Header-navigation-item')} aria-current="false" href="/racing">Racing</a>
                   <a className={cx('Header-navigation-item')} aria-current="false" href="/ico">ICO</a>

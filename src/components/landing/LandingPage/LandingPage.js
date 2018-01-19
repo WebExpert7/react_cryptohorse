@@ -67,7 +67,7 @@ export default class LandingPage extends React.Component {
                     <div className={cx('Container','Container--center')}>
                         <div className={cx('Explainer-why')}>
                             <h2 className={cx('Explainer-headline')}>What’s the big deal?</h2>
-                            <p className={cx('Explainer-description')}>CryptoPony is one of the world’s first horse racing games to be built on blockchain technology—the same breakthrough that makes things like Bitcoin and Ethereum possible. Bitcoin and ether are cryptocurrencies but ponies are cryptocollectibles. You can buy, sell, or trade your ponies like it was a traditional collectible, secure in the knowledge that blockchain will track ownership securely.</p>
+                            <p className={cx('Explainer-description')}>CryptoPonies is one of the world’s first horse racing games to be built on blockchain technology—the same breakthrough that makes things like Bitcoin and Ethereum possible. Bitcoin and ether are cryptocurrencies but ponies are cryptocollectibles. You can buy, sell, or trade your ponies like it was a traditional collectible, secure in the knowledge that blockchain will track ownership securely.</p>
                         </div>
                     </div>
                     <div className={cx('Explainer-bg')}>

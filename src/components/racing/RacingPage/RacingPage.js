@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import InputRange from 'react-input-range';
 import PropTypes from 'prop-types';
 import { Web3Provider } from 'react-web3';
+import { Redirect, Route } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
@@ -33,6 +34,8 @@ import landing_horse02 from 'static/image/landing_horse2.png';
 import landing_horse11 from 'static/image/landing_horse11.png';
 
 
+// let intervalId = null;
+
 export default class RacingPage extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -43,6 +46,11 @@ export default class RacingPage extends React.Component {
             amount: 0.1,
             transaction_result: '',
             click_button_result: '',
+            redirect: false,
+            random_progres_value : 0,
+            random_progres_value1 : 0,
+            random_progres_value2 : 0,
+            bet_button_state : false,
             loading: true,
             lucky: 'n/a',
             transaction: 'n/a'
@@ -60,6 +68,15 @@ export default class RacingPage extends React.Component {
         this.amountClick = this.amountClick.bind(this);
         this.onChangeAccount = this.onChangeAccount.bind(this);
         this.changeState = this.changeState.bind(this);
+        this.random_progress = this.random_progress.bind(this);
+    }
+
+    componentWillUpdate(web3) {
+        const metastatus = this.web3.currentProvider.publicConfigStore._state.networkVersion;
+        if (metastatus != 3){
+            this.props.history.push('/statustest');
+            // this.setState({ redirect: true });
+        }
     }
 
     handleClick(context) {
@@ -166,6 +183,8 @@ export default class RacingPage extends React.Component {
                     full_object.setState({transaction_result : ""});
                 }
                 else{
+                    full_object.state.bet_button_state = true;
+                    full_object.random_progress();
                     var interval = setInterval(function(){
                         full_object.web3.eth.getTransactionReceipt(result, function(err, transaction) {
                             console.info(transaction);
@@ -174,6 +193,7 @@ export default class RacingPage extends React.Component {
                                 if(transaction.status == 0x1)
                                 {
                                     clearInterval(interval);
+                                    full_object.state.bet_button_state = false;
                                     console.log("transaction success");
                                     full_object.setState({transaction_result : 'Transaction ID : '+result, click_button_result : 'Click "CLAIM" Button. You will get the ETH on your current wallet!'});
                                 }
@@ -207,12 +227,53 @@ export default class RacingPage extends React.Component {
             selected: selectedRows[0],
         });
     };
+
+    
+    func  = (intervalId, stateValue) => {
+        var i;
+
+        i = this.state[stateValue];
+
+        if(i > 99){
+            if(intervalId)
+                clearInterval(intervalId);
+
+            // console.log(`clearInterval invoked!`);
+            return;
+        }
+
+        this.setState({[stateValue] : i+1});
+
+        // console.log(`timer counter  = ${i}`);
+    }
+    
+    
+
+    random_progress = () => {
+        this.setState({random_progres_value:0, random_progres_value1:0, random_progres_value2:0});
+        const rndInterval = Math.floor(Math.random() * 150)+50;
+        const rndInterval1 = Math.floor(Math.random() * 150)+50;
+        const rndInterval2 = Math.floor(Math.random() * 150)+50;
+        console.log(`rnd1:${rndInterval} rnd2:${rndInterval1} rnd3:${rndInterval2} `);
+        const intervalId = setInterval(() => this.func(intervalId, 'random_progres_value'), rndInterval);
+        const intervalId1 = setInterval(() => this.func(intervalId1, 'random_progres_value1'), rndInterval1);
+        const intervalId2 = setInterval(() => this.func(intervalId2, 'random_progres_value2'), rndInterval2);
+    }
+    
     render() {
+        // if (this.state.redirect) {
+        //     return <Redirect to='/statustest'/>
+        // }
         const cx = classNames.bind(styles);
         const metastatus = this.context.web3.network;
         const iconStyles = {
             marginRight: 24,
         };
+        const metastatusid = this.context.web3.networkId;
+
+        // if (metastatusid != 3) {
+        //     return <Redirect to='/statustest'/>
+        // }
         return (
             <PageTemplate header={<HeaderContainer Container__full metastatus={metastatus}/>}  padding responsive>
                 <div className={cx('BrowsePage')}>
@@ -255,19 +316,19 @@ export default class RacingPage extends React.Component {
                                             <TableRowColumn><div><img className={cx('betting_image')} src={landing_horse07} alt="" /></div></TableRowColumn>
                                             <TableRowColumn>7</TableRowColumn>
                                             <TableRowColumn>15</TableRowColumn>
-                                            <TableRowColumn className={cx('progress_background')}><span>75%</span><Progress completed={75} /></TableRowColumn>
+                                            <TableRowColumn className={cx('progress_background')}><span>{this.state.random_progres_value}%</span><Progress  completed={this.state.random_progres_value} /></TableRowColumn>
                                         </TableRow>
                                         <TableRow selected={this.isSelected(1)}>
                                             <TableRowColumn><img className={cx('betting_image')} src={landing_horse11} alt="" /></TableRowColumn>
                                             <TableRowColumn>5</TableRowColumn>
                                             <TableRowColumn>23</TableRowColumn>
-                                            <TableRowColumn className={cx('progress_background')}><span>45%</span><Progress className={cx('progress_color_2')} completed={45} /></TableRowColumn>
+                                            <TableRowColumn className={cx('progress_background')}><span>{this.state.random_progres_value1}%</span><Progress className={cx('progress_color_2')} completed={this.state.random_progres_value1} /></TableRowColumn>
                                         </TableRow>
                                         <TableRow selected={this.isSelected(2)}>
                                             <TableRowColumn><img className={cx('betting_image')} src={landing_horse02} alt="" /></TableRowColumn>
                                             <TableRowColumn>10</TableRowColumn>
                                             <TableRowColumn>19</TableRowColumn>
-                                            <TableRowColumn className={cx('progress_background')}><span>55%</span><Progress className={cx('progress_color_3')} completed={55} /></TableRowColumn>
+                                            <TableRowColumn className={cx('progress_background')}><span>{this.state.random_progres_value2}%</span><Progress className={cx('progress_color_3')} completed={this.state.random_progres_value2} /></TableRowColumn>
                                         </TableRow>
                                         </TableBody>
                                     </Table>
@@ -277,7 +338,7 @@ export default class RacingPage extends React.Component {
                                     <input type="number" step="0.01" min="0.1" max="1" placeholdername="Amount" value = {this.state.amount} onChange = {this.amountChange} id="Amount" title="Enter the amount to bet in ether" className={cx('form-control')} />
                                     <div className={cx('input-group-btn')}>
                                         <a id="PlaceBetTooltip">
-                                            <RaisedButton className={cx('place_bet')} onClick={this.amountClick} label="Place bet" primary={true} />
+                                            <RaisedButton className={cx('place_bet')} onClick={this.amountClick} disabled={this.state.bet_button_state} label="Place bet" primary={true} />
                                         </a>
                                     </div>
                                 </div>
@@ -297,7 +358,7 @@ export default class RacingPage extends React.Component {
                                     <input type="text" placeholder="Available after race ends" value = {this.state.keyword} onChange = {this.claimChange} className={cx('form-control')} />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <div className={cx('input-group-btn')}>
                                         <a id="ClaimTooltip">
-                                            <RaisedButton className={cx('Claim_btn')} onClick={this.claimClick} backgroundColor={green300} label="Claim" labelColor={white} />
+                                            <RaisedButton className={cx('Claim_btn')} onClick={this.claimClick} disabled={this.state.bet_button_state} backgroundColor={green300} label="Claim" labelColor={white} />
                                         </a>
                                     </div>
                                 </div>
